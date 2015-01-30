@@ -1,0 +1,18 @@
+{
+  "name": "nPage",
+  "version": "0.0.0",
+  "authors": [
+    "Anton Kjörck Lindén <anton@noviumdesign.se>"
+  ],
+  "description": "nPage is a landingpage framework used by Novium",
+  "main": "sass/main.sass",
+  "license": "MIT",
+  "homepage": "https://www.noviumdesign.se",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
