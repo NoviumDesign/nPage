@@ -6,7 +6,7 @@
   ],
   "description": "nPage is a landingpage framework used by Novium",
   "main": "sass/main.sass",
-  "license": "MIT",
+  "license": "Private",
   "homepage": "https://www.noviumdesign.se",
   "ignore": [
     "**/.*",
@@ -14,5 +14,12 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "sticky": "~1.0.1",
+    "jQuery-Form-Validator": "~2.1.47",
+    "bpopup": "~0.11.0",
+    "jquery-form": "~3.46.0"
+  }
 }
