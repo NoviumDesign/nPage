@@ -20,6 +20,8 @@
     "sticky": "~1.0.1",
     "jQuery-Form-Validator": "~2.1.47",
     "bpopup": "~0.11.0",
-    "jquery-form": "~3.46.0"
+    "jquery-form": "~3.46.0",
+    "susy": "~2.2.2",
+    "breakpoint-sass": "~2.5.0"
   }
 }

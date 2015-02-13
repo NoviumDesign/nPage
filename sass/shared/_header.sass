@@ -1,0 +1,46 @@
+#header
+  background-color: $header-background-color
+  position: relative
+
+  .top
+    +clearfix
+
+    .inner
+      height: 90px
+      +container
+
+      .logo-wrapper, .contact
+        +span(12)
+
+        +breakpoint($tablet)
+          +span(6)
+
+        .call
+          display: none
+          margin-top: 1.32em
+
+          +breakpoint($tablet)
+            display: block
+
+          img
+            float: right
+            display: block
+
+          a
+            margin-left: 18px
+            float: right
+            display: block
+            color: $theme-color
+            font-size: 2em
+
+#mobile-navigation
+  display: block
+
+  +breakpoint($tablet)
+    display: none
+
+#desktop-navigation
+  display: none
+
+  +breakpoint($tablet)
+    display: block

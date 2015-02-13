@@ -1,0 +1,357 @@
+/**
+ * Horizontal CSS Drop-Down Menu Module
+ *
+ * @file    dropdown.css
+ * @package   Dropdown
+ * @version   0.8
+ * @type    Transitional
+ * @stacks    597-599
+ * @browsers  Windows: IE6+, Opera7+, Firefox3+
+ *        Mac OS: Safari2+, Firefox3+
+ *
+ * @link    http://www.lwis.net/free-css-drop-down-menu
+ * @copyright 2008-2012 Live Web Initiatives, http://www.lwis.net, http://www.lwis.net
+ *
+ */
+
+ul.dropdown,
+ul.dropdown li,
+ul.dropdown ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+ul.dropdown {
+ position: relative;
+ z-index: 597;
+ float: left;
+}
+
+ul.dropdown li,
+#secondary-navigation > ul li {
+ float: left;
+ min-height: 1px;
+ line-height: 1.3em;
+ vertical-align: middle;
+}
+
+ul.dropdown li.hover,
+ul.dropdown li:hover {
+ position: relative;
+ z-index: 599;
+ cursor: default;
+}
+
+ul.dropdown ul {
+ visibility: hidden;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ z-index: 598;
+ width: 100%;
+}
+
+ul.dropdown ul li {
+ float: none;
+ background-color: $light-gray;
+}
+
+ul.dropdown ul ul {
+ top: 1px;
+ left: 99%;
+}
+
+ul.dropdown li:hover > ul {
+ visibility: visible;
+}
+
+/**
+ * Vertical Left-to-Right Direction CSS Drop-Down Menu Component
+ *
+ * @file    dropdown.vertical.css
+ * @package   Dropdown
+ * @version   0.3.2
+ * @type    Transitional
+ * @requires  dropdown.css
+ * @browsers  Windows: IE7+, Opera7+, Firefox3+
+ *        Mac OS: Safari2+, Firefox3+
+ *
+ * @link    http://www.lwis.net/free-css-drop-down-menu
+ * @copyright 2008-2012 Live Web Initiatives, http://www.lwis.net, http://www.lwis.net                      
+ *
+ */
+
+ul.dropdown-vertical {
+ width: 200px;
+}
+
+ul.dropdown-vertical ul {
+ top: 1px;
+ left: 99%;
+}
+
+ul.dropdown-vertical li {
+ float: none;
+}
+
+/** 
+ * Vertical Right-to-Left Direction CSS Drop-Down Menu Component
+ *
+ * @file    dropdown.vertical.rtl.css
+ * @package   Dropdown
+ * @version   0.3.0
+ * @type    Transitional
+ * @requires  dropdown.vertical.css
+ * @browsers  Windows: IE7+, Opera7+, Firefox3+
+ *        Mac OS: Safari2+, Firefox3+
+ *
+ * @link    http://www.lwis.net/free-css-drop-down-menu
+ * @copyright 2008-2012 Live Web Initiatives, http://www.lwis.net, http://www.lwis.net
+ *
+ */
+
+ul.dropdown-vertical-rtl {
+ float: right;
+}
+
+ul.dropdown-vertical-rtl ul,
+ul.dropdown-horizontal > li.dropdown-vertical-rtl ul ul {
+ left: auto !important;
+ right: 99%;
+}
+
+ul.dropdown-horizontal li.dropdown-vertical-rtl ul {
+ left: auto;
+ right: 0;
+}
+
+ul.dropdown-vertical-rtl li,
+li.dropdown-vertical-rtl li {
+ text-align: right;
+}
+
+
+
+
+
+
+
+// THEME STARTS HERE!!!!!!!!!!
+
+
+
+
+
+
+/** 
+ * Default CSS Drop-Down Menu Theme
+ *
+ * @file    default.css
+ * @name    Default
+ * @version   0.1.1
+ * @type    transitional
+ * @browsers  Windows: IE7+, Opera7+, Firefox3+
+ *        Mac OS: Safari2+, Firefox3+
+ *
+ * @link    http://www.lwis.net/free-css-drop-down-menu
+ * @copyright 2008-2012 Live Web Initiatives, http://www.lwis.net
+ *
+ */
+
+
+/* -- Base drop-down styling -- */
+
+ul.dropdown,
+#secondary-navigation > ul {
+  font-weight: bold;
+}
+
+  ul.dropdown li {
+    padding: 7px 10px;
+    color: $inverted-color;
+    position: relative;
+  }
+
+  ul.dropdown li.hover,
+  ul.dropdown li:hover,
+  ul.dropdown li.active
+    {
+      background-color: $light-gray;
+      a {
+        color: $theme-color;
+      }
+    }
+
+
+  #secondary-navigation > ul li.hover,
+  #secondary-navigation > ul li:hover,
+  #secondary-navigation > ul li.active
+   {
+    background-color: $inverted-color;
+    a {
+      color: $theme-color;
+    }
+  }
+
+  ul.dropdown a:link,
+  ul.dropdown a:visited,
+  #secondary-navigation > ul a:link,
+  #secondary-navigation > ul a:visited {
+    color: $inverted-color; text-decoration: none; 
+  }
+
+  ul.dropdown a:hover,
+  ul.dropdown a:active,
+  #secondary-navigation > ul a:hover,
+  #secondary-navigation > ul a:active {
+    color: $theme-color;
+  }
+
+  /* -- level mark -- */
+
+  ul.dropdown ul {
+    width: 150px;
+    background-color: #FFFFFF;
+  }
+
+    ul.dropdown ul li {
+      font-weight: normal;
+    }
+
+/* -- Supporting class `dir` -- */
+
+ul.dropdown *.dir > a {
+  padding-right: 20px;
+  &:after {
+    right: 7px;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #FFFFFF;
+    border-width: 5px;
+    margin-left: -5px;
+  }
+}
+
+/* -- Components override -- */
+
+ul.dropdown-horizontal ul *.dir > a {
+  padding-right: 15px;
+  &:after {
+    right: 7px;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-left-color: #000000;
+    border-width: 5px;
+    margin-top: -5px;
+  }
+}
+
+ul.dropdown-horizontal > li.dropdown-vertical-rtl ul *.dir > a {
+  padding-right: 10px;
+  padding-left: 15px;
+  &:after {
+    left: 7px;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-right-color: #000000;
+    border-width: 5px;
+    margin-top: -5px;    
+  }
+}
+
+/** 
+ * Default Advanced CSS Drop-Down Menu Theme
+ *
+ * @file    default.advanced.css
+ * @name    Default
+ * @version   0.1
+ * @type    transitional
+ * @browsers  Windows: IE7+, Opera7+, Firefox3+
+ *        Mac OS: Safari2+, Firefox3+
+ *
+ * @link    http://www.lwis.net/free-css-drop-down-menu
+ * @copyright 2008-2012 Live Web Initiatives, http://www.lwis.net
+ *
+ */
+
+/* -- Base style extension -- */
+
+ul.dropdown li a,
+#secondary-navigation > ul li a {
+ display: block;
+ padding: 17px 20px;
+}
+
+/* -- Base style override -- */
+
+ul.dropdown li {
+ padding: 0;
+}
+
+
+/* -- Base style reinitiate: post-override activities -- */
+
+ul.dropdown li.dir > a {
+ padding: 17px 30px 17px 20px;
+}
+
+ul.dropdown ul li.dir > a {
+ padding-right: 15px;
+}
+
+//sub-nav colors
+ul.dropdown li.dir ul li a,
+ul.dropdown li.dir ul li.dir,
+ul.dropdown .dropdown-vertical-rtl ul li a {
+  color: #000000;
+  &:hover {
+    color: $theme-color;
+  }
+}
+
+.opacity-90 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.opacity-80 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.opacity-70 {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.opacity-60 {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.opacity-50 {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.opacity-40 {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.opacity-30 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.opacity-20 {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.opacity-10 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
