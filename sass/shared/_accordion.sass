@@ -1,0 +1,96 @@
+.accordion-tabs
+  $base-background-color: white !default
+  $base-spacing: 1.5em !default
+  $base-accent-color: #477dca !default
+  $base-link-color: $base-accent-color !default
+  $dark-gray: #333333 !default
+  $light-gray: #dddddd !default
+  $medium-screen: em(640) !default
+  $tab-content-background: $secondary-background-color
+  $tab-active-background: $theme-color
+  $tab-inactive-color: $inverted-color
+  $tab-inactive-hover-color: darken($tab-active-background, 5)
+  $tab-mode: $mobile
+
+  +clearfix
+  line-height: 1.5
+  margin-bottom: $base-spacing
+  padding: 0
+  margin-top: $large-margin
+  +breakpoint($tab-mode)
+    text-align: center
+
+  .tab-header-and-content
+    list-style: none
+    +breakpoint($tab-mode)
+      display: inline
+      text-align: left
+      margin-left: -5px
+
+    &:first-child .tab-link
+      +breakpoint($tab-mode)
+        border-top: 0
+
+    &:last-child .tab-link
+      +breakpoint($tab-mode)
+
+  .tab-link
+    background-color: $tab-inactive-color
+    color: $dark-gray
+    padding: 12px 15px
+    display: block
+    font-weight: bold
+    text-decoration: none
+    text-transform: uppercase
+    +breakpoint($tab-mode)
+      +inline-block
+      border-top: 0
+
+    +breakpoint($tablet)
+      padding: 20px 30px
+
+    &:hover
+      color: $base-link-color
+
+    &:focus
+      outline: none
+
+    &.is-active
+      color: white
+      background-color: $tab-active-background
+      +breakpoint($tab-mode)
+        background-color: $tab-active-background
+        border-bottom-color: $tab-active-background
+        margin-bottom: -1px
+
+  .tab-content
+    background: $tab-content-background
+    display: none
+    width: 100%
+    text-transform: normal
+    +breakpoint($tab-mode)
+      float: left
+      margin-top: $large-margin
+
+    h4
+      border-top: 2px solid $medium-gray
+      padding: 20px 15px
+
+    ul.services-list > li, ul.preperations-list > li
+      padding: 20px 15px
+      background-position: center right 15px
+      background-size: 28px 28px
+      background-repeat: no-repeat
+      padding-right: 50px
+
+      &:nth-child(2n+1)
+        background-color: $base-background-color
+
+      &:nth-child(2n+2)
+        background-color: $secondary-background-color
+
+    ul.services-list > li
+      background-image: url(/images/checkmark.svg)
+
+    ul.preperations-list > li
+      background-image: url(/images/preperation.svg)

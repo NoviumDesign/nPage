@@ -1,0 +1,162 @@
+.main-content-container
+  +container
+
+.row
+  width: 100%
+  float: left
+
+//Mobile columns
+.mobile-one-column
+  +span(1)
+
+.mobile-two-column
+  +span(2)
+
+.mobile-three-column
+  +span(3)
+
+.mobile-four-column
+  +span(4)
+
+.mobile-five-column
+  +span(5)
+
+.mobile-six-column
+  +span(6)
+
+.mobile-seven-column
+  +span(7)
+
+.mobile-eight-column
+  +span(8)
+
+.mobile-nine-column
+  +span(9)
+
+.mobile-ten-column
+  +span(10)
+
+.mobile-eleven-column
+  +span(11)
+
+.mobile-twelve-column
+  +span(12)
+
+//Tablet columns
++breakpoint($tablet)
+  .tablet-one-column
+    +span(1)
+
+  .tablet-two-column
+    +span(2)
+
+  .tablet-three-column
+    +span(3)
+
+  .tablet-four-column
+    +span(4)
+
+  .tablet-five-column
+    +span(5)
+
+  .tablet-six-column
+    +span(6)
+
+  .tablet-seven-column
+    +span(7)
+
+  .tablet-eight-column
+    +span(8)
+
+  .tablet-nine-column
+    +span(9)
+
+  .tablet-ten-column
+    +span(10)
+
+  .tablet-eleven-column
+    +span(11)
+
+  .tablet-twelve-column
+    +span(12)
+
+//Desktop columns
++breakpoint($desktop)
+  .desktop-one-column
+    +span(1)
+
+  .desktop-two-column
+    +span(2)
+
+  .desktop-three-column
+    +span(3)
+
+  .desktop-four-column
+    +span(4)
+
+  .desktop-five-column
+    +span(5)
+
+  .desktop-six-column
+    +span(6)
+
+  .desktop-seven-column
+    +span(7)
+
+  .desktop-eight-column
+    +span(8)
+
+  .desktop-nine-column
+    +span(9)
+
+  .desktop-ten-column
+    +span(10)
+
+  .desktop-eleven-column
+    +span(11)
+
+  .desktop-twelve-column
+    +span(12)
+
+//Centered columns
++breakpoint($tablet)
+  .tablet-ten-column-centered
+    +span(isolate 10 at 2)
+
++breakpoint($desktop)
+  .desktop-six-column-centered
+    +span(isolate 6 at 4)
+
+  .desktop-ten-column-centered
+    +span(isolate 10 at 2)
+
+//Gallery grid
+.mobile-full-gallery-item
+  +span(12 inside no-gutters)
+
++breakpoint($tablet)
+  .tablet-half-gallery-item
+    +span(6 inside no-gutters)
+
+// Vertical borders
+.split-border-right
+  +span(12)
+
+  +breakpoint($tablet)
+    +span(6 inside no-gutters)
+    margin: 0
+    padding: 0 gutter()
+    border-right: 1px solid $theme-color
+
+// Hide classes
++breakpoint($mobile)
+  .hide-for-mobile
+    display: none
+
++breakpoint($tablet-only)
+  .hide-for-tablet
+    display: none
+
++breakpoint($desktop)
+  .hide-for-desktop
+    display: none

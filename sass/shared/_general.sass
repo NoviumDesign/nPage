@@ -1,9 +1,16 @@
 // Susy settings
-$susy: (container: 68em,columns: 12, gutters: 1 / 2, math: fluid, gutter-position: split)
+$susy: (container: 62em,columns: 12, gutters: 2, math: fluid, gutter-position: split)
 
 // Breakpoints
+$mobile: max-width 768px
 $tablet: 768px
+$tablet-only: 768px 1024px
 $desktop: 1024px
+
+*, *:before, *:after
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
 
 body
   margin: 0
@@ -12,8 +19,112 @@ body
   +clearfix
   box-shadow: 0 2px 3px 0 #DFDFDF
 
-article
-  background-color: #FFFFFF
-
-.main-content-container
+.container
   +container
+  background-color: $base-background-color
+
+.section-container, .section-container-contrast
+  +container
+  padding: $main-section-padding
+  
+.section-container
+  background-color: $base-background-color
+
+.section-container-contrast
+  background-color: $secondary-background-color
+
+.text-align-left
+  text-align: left
+
+.text-align-center
+  text-align: center
+
+.text-align-right
+  text-align: right
+
+hr.thick-border
+  border-bottom: 5px solid $theme-color
+  margin: 0
+
+// Margin classes
+.no-margin
+  margin: 0
+
+// Small
+.margin-top-small
+  margin-top: $small-margin
+
+.margin-bottom-small
+  margin-bottom: $small-margin
+
+.margin-left-small
+  margin-left: $small-margin
+
+.margin-right-small
+  margin-right: $small-margin
+
+// Medium
+.margin-top-medium
+  margin-top: $medium-margin
+
+.margin-bottom-medium
+  margin-bottom: $medium-margin
+
+.margin-left-medium
+  margin-left: $medium-margin
+
+.margin-right-medium
+  margin-right: $medium-margin
+
+// Large
+.margin-top-large
+  margin-top: $large-margin
+
+.margin-bottom-large
+  margin-bottom: $large-margin
+
+.margin-left-large
+  margin-left: $large-margin
+
+.margin-right-large
+  margin-right: $large-margin
+
+// Padding classes
+// Small
+.padding-top-small
+  padding-top: $small-margin
+
+.padding-bottom-small
+  padding-bottom: $small-margin
+
+.padding-left-small
+  padding-left: $small-margin
+
+.padding-right-small
+  padding-right: $small-margin
+
+// Medium
+.padding-top-medium
+  padding-top: $medium-margin
+
+.padding-bottom-medium
+  padding-bottom: $medium-margin
+
+.padding-left-medium
+  padding-left: $medium-margin
+
+.padding-right-medium
+  padding-right: $medium-margin
+
+// Large
+.padding-top-large
+  padding-top: $large-margin
+
+.padding-bottom-large
+  padding-bottom: $large-margin
+
+.padding-left-large
+  padding-left: $large-margin
+
+.padding-right-large
+  padding-right: $large-margin

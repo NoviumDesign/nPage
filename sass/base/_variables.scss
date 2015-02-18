@@ -5,12 +5,14 @@ $base-font-family: $serif;
 $header-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: 1em;
-$h1-font-size: $base-font-size * 2.25;
-$h2-font-size: $base-font-size * 2;
-$h3-font-size: $base-font-size * 1.75;
+$base-font-size: 18px;
+$large-font-size: $base-font-size * 1.22;
+$small-font-size: $base-font-size * 0.89;
+$h1-font-size: $base-font-size * 2.6;
+$h2-font-size: $base-font-size * 2.05;
+$h3-font-size: $base-font-size * 1.8;
 $h4-font-size: $base-font-size * 1.5;
-$h5-font-size: $base-font-size * 1.25;
+$h5-font-size: $base-font-size * 1.4;
 $h6-font-size: $base-font-size;
 
 // Line height
