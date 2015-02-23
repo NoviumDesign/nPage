@@ -1,0 +1,47 @@
+// Susy settings
+$susy: (container: 62em,columns: 12, gutters: 2, math: fluid, gutter-position: split)
+
+// Breakpoints
+$mobile: max-width 768px
+$tablet: 768px
+$tablet-only: 768px 1024px
+$desktop: 1024px
+
+*, *:before, *:after
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  margin: 0
+
+.headwrap
+  +clearfix
+  box-shadow: 0 2px 3px 0 #DFDFDF
+
+.container
+  +container
+  background-color: $base-background-color
+
+.section-container, .section-container-contrast
+  +container
+  padding: $main-section-padding
+  
+.section-container
+  background-color: $base-background-color
+
+.section-container-contrast
+  background-color: $secondary-background-color
+
+.text-align-left
+  text-align: left
+
+.text-align-center
+  text-align: center
+
+.text-align-right
+  text-align: right
+
+hr.thick-border
+  border-bottom: 5px solid $theme-color
+  margin: 0
