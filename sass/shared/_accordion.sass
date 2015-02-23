@@ -17,34 +17,30 @@
   margin-bottom: $base-spacing
   padding: 0
   margin-top: $large-margin
-  +breakpoint($tab-mode)
-    text-align: center
+  text-align: center
 
   .tab-header-and-content
     list-style: none
-    +breakpoint($tab-mode)
-      display: inline
-      text-align: left
-      margin-left: -5px
+    display: inline
+    text-align: left
+    margin-left: -5px
 
     &:first-child .tab-link
-      +breakpoint($tab-mode)
-        border-top: 0
+      border-top: 0
 
-    &:last-child .tab-link
-      +breakpoint($tab-mode)
+    // &:last-child .tab-link
+    //   +breakpoint($tab-mode)
 
   .tab-link
     background-color: $tab-inactive-color
     color: $dark-gray
     padding: 12px 15px
-    display: block
+    // display: block
     font-weight: bold
     text-decoration: none
     text-transform: uppercase
-    +breakpoint($tab-mode)
-      +inline-block
-      border-top: 0
+    +inline-block
+    border-top: 0
 
     +breakpoint($tablet)
       padding: 20px 30px
@@ -58,19 +54,17 @@
     &.is-active
       color: white
       background-color: $tab-active-background
-      +breakpoint($tab-mode)
-        background-color: $tab-active-background
-        border-bottom-color: $tab-active-background
-        margin-bottom: -1px
+      background-color: $tab-active-background
+      border-bottom-color: $tab-active-background
+      margin-bottom: -1px
 
   .tab-content
     background: $tab-content-background
     display: none
     width: 100%
     text-transform: normal
-    +breakpoint($tab-mode)
-      float: left
-      margin-top: $large-margin
+    float: left
+    margin-top: $large-margin
 
     h4
       border-top: 2px solid $medium-gray

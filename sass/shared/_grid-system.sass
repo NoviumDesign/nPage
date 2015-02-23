@@ -122,13 +122,20 @@
 +breakpoint($tablet)
   .tablet-ten-column-centered
     +span(isolate 10 at 2)
+    clear: left
 
 +breakpoint($desktop)
   .desktop-six-column-centered
     +span(isolate 6 at 4)
+    clear: left
+
+  .desktop-eight-column-centered
+    +span(isolate 8 at 3)
+    clear: left
 
   .desktop-ten-column-centered
     +span(isolate 10 at 2)
+    clear: left
 
 //Gallery grid
 .mobile-full-gallery-item
@@ -148,15 +155,11 @@
     padding: 0 gutter()
     border-right: 1px solid $theme-color
 
-// Hide classes
-+breakpoint($mobile)
-  .hide-for-mobile
-    display: none
+.split-border-left
+  +span(12)
 
-+breakpoint($tablet-only)
-  .hide-for-tablet
-    display: none
-
-+breakpoint($desktop)
-  .hide-for-desktop
-    display: none
+  +breakpoint($tablet)
+    +span(6 inside no-gutters)
+    margin: 0
+    padding: 0 gutter()
+    border-left: 1px solid $theme-color

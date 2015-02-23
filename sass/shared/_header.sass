@@ -7,40 +7,55 @@
 
     .inner
       height: 90px
+      padding-top: 20px
       +container
 
       .logo-wrapper, .contact
-        +span(12)
-
-        +breakpoint($tablet)
-          +span(6)
 
         .call
-          display: none
-          margin-top: 1.32em
-
-          +breakpoint($tablet)
-            display: block
 
           img
             float: right
             display: block
+            max-height: 52px
 
           a
+            display: none
             margin-left: 18px
             float: right
-            display: block
             color: $theme-color
             font-size: 2em
 
-#mobile-navigation
-  display: block
+            +breakpoint($tablet)
+              display: block
 
-  +breakpoint($tablet)
-    display: none
+      .logo-wrapper
+        +span(8)
+
+        +breakpoint($tablet)
+          +span(5)
+
+        +breakpoint($desktop)
+          +span(6)
+
+      .contact
+        +span(2)
+
+        +breakpoint($tablet)
+          +span(5)
+
+        +breakpoint($desktop)
+          +span(6)
+
+      .mobile-menu-button
+        +span(2)
+
+        +breakpoint($tablet)
+          +span(1)
+
+        +breakpoint($desktop)
+          display: none
 
 #desktop-navigation
-  display: none
-
-  +breakpoint($tablet)
-    display: block
+  +breakpoint($mobile)
+    display: none

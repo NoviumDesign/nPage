@@ -1,0 +1,54 @@
+.modal
+  display: none
+  background-color: #FFF
+  max-width: 95%
+  padding: 10px 15px
+
+  +breakpoint($tablet)
+    width: 90%
+    padding: 25px 35px
+
+  +breakpoint($desktop)
+    width: 70%
+
+  .modal-contact-info, .modal-form
+    +span(12)
+
+  .module-price-calculator-stay-cleaning 
+    padding: 0
+
+    input
+      background-color: $form-background-color
+
+.cat_button
+  float: right
+  margin-top: 6px
+
+  &:hover
+    color: #FFF !important
+
+.modal-contact-info
+  margin-bottom: 15px
+
+.b-close
+  position: absolute
+  top: 0
+  right: 0
+  background-color: $theme-color
+  padding: 2px 8px
+
+  &:hover
+    cursor: pointer
+    background-color: lighten($theme-color, 15)
+
+  img
+    height: 12px
+
+.modal-column
+  +span(12)
+
+  +breakpoint($tablet)
+    +span(6)
+
+.hidden-input
+  display: none

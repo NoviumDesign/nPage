@@ -17,6 +17,7 @@ h6 {
   line-height: $header-line-height;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  font-weight: normal;
 }
 
 h1 {
@@ -117,4 +118,32 @@ nav {
 
 .small-font-size {
   font-size: $small-font-size;
+}
+
+.h1-font-size {
+  font-size: $h1-font-size;
+}
+
+.h2-font-size {
+  font-size: $h2-font-size;
+}
+
+.h3-font-size {
+  font-size: $h3-font-size;
+}
+
+.h4-font-size {
+  font-size: $h4-font-size;
+}
+
+.h5-font-size {
+  font-size: $h5-font-size;
+}
+
+.theme-color {
+  color: $theme-color;
+}
+
+a.theme-color:hover {
+  color: lighten($theme-color, 15);
 }

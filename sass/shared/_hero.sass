@@ -2,20 +2,14 @@ $hero-height: 320px
 
 .hero
   height: $hero-height
-  padding-top: $hero-height / 2 - 45px
+
+  +breakpoint($tablet)
+    padding-top: $hero-height / 2 - 110px
     
   h1
+    +span(12)
     font-size: $h2-font-size
     color: $inverted-color
-    text-align: center
-
-    +breakpoint($tablet)
-      +span(10)
-      text-align: right
-
-    +breakpoint($desktop)
-      +span(8)
-      text-align: center
 
 .hero-illustration
   display: none

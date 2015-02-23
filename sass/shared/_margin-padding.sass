@@ -1,51 +1,3 @@
-// Susy settings
-$susy: (container: 62em,columns: 12, gutters: 2, math: fluid, gutter-position: split)
-
-// Breakpoints
-$mobile: max-width 768px
-$tablet: 768px
-$tablet-only: 768px 1024px
-$desktop: 1024px
-
-*, *:before, *:after
-  -moz-box-sizing: border-box
-  -webkit-box-sizing: border-box
-  box-sizing: border-box
-
-body
-  margin: 0
-
-.headwrap
-  +clearfix
-  box-shadow: 0 2px 3px 0 #DFDFDF
-
-.container
-  +container
-  background-color: $base-background-color
-
-.section-container, .section-container-contrast
-  +container
-  padding: $main-section-padding
-  
-.section-container
-  background-color: $base-background-color
-
-.section-container-contrast
-  background-color: $secondary-background-color
-
-.text-align-left
-  text-align: left
-
-.text-align-center
-  text-align: center
-
-.text-align-right
-  text-align: right
-
-hr.thick-border
-  border-bottom: 5px solid $theme-color
-  margin: 0
-
 // Margin classes
 .no-margin
   margin: 0
@@ -88,6 +40,46 @@ hr.thick-border
 
 .margin-right-large
   margin-right: $large-margin
+
+// Negative margin
+// Small
+.margin-negative-top-small
+  margin-top: -$small-margin
+
+.margin-negative-bottom-small
+  margin-bottom: -$small-margin
+
+.margin-negative-left-small
+  margin-left: -$small-margin
+
+.margin-negative-right-small
+  margin-right: -$small-margin
+
+// Medium
+.margin-negative-top-medium
+  margin-top: -$medium-margin
+
+.margin-negative-bottom-medium
+  margin-bottom: -$medium-margin
+
+.margin-negative-left-medium
+  margin-left: -$medium-margin
+
+.margin-negative-right-medium
+  margin-right: -$medium-margin
+
+// Large
+.margin-negative-top-large
+  margin-top: -$large-margin
+
+.margin-negative-bottom-large
+  margin-bottom: -$large-margin
+
+.margin-negative-left-large
+  margin-left: -$large-margin
+
+.margin-negative-right-large
+  margin-right: -$large-margin
 
 // Padding classes
 // Small
