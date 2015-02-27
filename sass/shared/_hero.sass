@@ -2,9 +2,7 @@ $hero-height: 320px
 
 .hero
   height: $hero-height
-
-  +breakpoint($tablet)
-    padding-top: $hero-height / 2 - 110px
+  padding-top: $hero-height / 10
     
   h1
     +span(12)
@@ -15,5 +13,8 @@ $hero-height: 320px
   display: none
 
   +breakpoint($tablet)
-    +span(2)
+    width: 15%
+    float: left
     display: block
+    margin-left: gutter()
+    margin-right: gutter()

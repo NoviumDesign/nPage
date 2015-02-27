@@ -6,18 +6,19 @@ $header-font-family: $base-font-family;
 
 // Font Sizes
 $base-font-size: 18px;
-$large-font-size: $base-font-size * 1.22;
-$small-font-size: $base-font-size * 0.89;
+$large-font-size: $base-font-size * 1.16;
+$medium-font-size: $base-font-size * 1.11;
+$small-font-size: $base-font-size * 0.95;
 $h1-font-size: $base-font-size * 2.6;
-$h2-font-size: $base-font-size * 2.05;
+$h2-font-size: $base-font-size * 1.95;
 $h3-font-size: $base-font-size * 1.8;
 $h4-font-size: $base-font-size * 1.5;
 $h5-font-size: $base-font-size * 1.4;
 $h6-font-size: $base-font-size;
 
 // Line height
-$base-line-height: 1.5;
-$header-line-height: 1.25;
+$base-line-height: 1.45;
+$header-line-height: 1.325;
 
 // Other Sizes
 $base-border-radius: 8px;
@@ -28,5 +29,5 @@ $base-z-index: 0;
 $green: #1eb533;
 $blue: #3a8cc9;
 $dark-gray: #333333;
-$medium-gray: #999999;
+$medium-gray: #CCCCCC;
 $light-gray: #dddddd;

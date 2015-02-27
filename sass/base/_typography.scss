@@ -112,8 +112,16 @@ nav {
   font-family: $sans-serif;
 }
 
+h1.sans-serif, h2.sans-serif, h3.sans-serif, h4.sans-serif, h5.sans-serif, h6.sans-serif {
+  line-height: 1.175em
+}
+
 .large-font-size {
   font-size: $large-font-size;
+}
+
+.medium-font-size {
+  font-size: $medium-font-size;
 }
 
 .small-font-size {
@@ -146,4 +154,17 @@ nav {
 
 a.theme-color:hover {
   color: lighten($theme-color, 15);
+}
+
+hr {
+  border-color: $theme-color;
+  margin: 1.05em 0;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
 }

@@ -16,7 +16,7 @@
   line-height: 1.5
   margin-bottom: $base-spacing
   padding: 0
-  margin-top: $large-margin
+  margin-top: 20px
   text-align: center
 
   .tab-header-and-content
@@ -34,7 +34,7 @@
   .tab-link
     background-color: $tab-inactive-color
     color: $dark-gray
-    padding: 12px 15px
+    padding: 12px 10px
     // display: block
     font-weight: bold
     text-decoration: none
@@ -46,7 +46,7 @@
       padding: 20px 30px
 
     &:hover
-      color: $base-link-color
+      background-color: lighten($tab-active-background, 50)
 
     &:focus
       outline: none

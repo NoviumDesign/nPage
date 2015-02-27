@@ -1,13 +1,25 @@
-$footer-background-color: $dark-gray
-$footer-font-color: lighten($footer-background-color, 30)
+$footer-background-color: #737373
+$footer-font-color: lighten($footer-background-color, 20)
+$footer-navigation-color: lighten($footer-background-color, 45)
 
 footer
   +container
   background-color: $footer-background-color
   padding: $main-section-padding
 
-  h1
-    color: $inverted-color
-
-  a, span, p, li
+  span, p, li
     color: $footer-font-color
+
+  li a, h1, h2, h3, h4, h5, h6
+    color: $footer-navigation-color
+
+  li a:hover
+    color: $footer-font-color
+
+  .logo-wrapper
+    +breakpoint($mobile)
+      margin-top: 20px
+
+  .copyright-container
+    +breakpoint($mobile)
+      text-align: left

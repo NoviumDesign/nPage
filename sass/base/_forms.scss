@@ -52,6 +52,21 @@ select[multiple=multiple] {
   }
 }
 
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:    lighten($dark-gray, 25);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    lighten($dark-gray, 25);
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    lighten($dark-gray, 25);
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    lighten($dark-gray, 25);
+}
+
 textarea {
   resize: vertical;
 }
@@ -71,8 +86,33 @@ input[type="file"] {
   width: 100%;
 }
 
+input[type="number"] {
+  -moz-appearance:textfield;
+}
+
 select {
   margin-bottom: $base-spacing;
   max-width: 100%;
   width: auto;
+}
+
+.has-error {
+  margin-bottom: 0.75em;
+
+  input {
+    margin-bottom: 0;
+  }
+}
+
+.has-success input {
+  background-image: url(/images/checkmark.svg);
+  background-repeat: no-repeat;
+  background-position: center right 0.25em;
+  background-size: 28px 28px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

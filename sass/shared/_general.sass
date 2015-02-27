@@ -23,9 +23,16 @@ body
   +container
   background-color: $base-background-color
 
+  +breakpoint($mobile)
+    padding-left: $container-padding-mobile
+    padding-right: $container-padding-mobile
+
 .section-container, .section-container-contrast
   +container
-  padding: $main-section-padding
+  padding: $main-section-padding-mobile
+
+  +breakpoint($tablet)
+    padding: $main-section-padding
   
 .section-container
   background-color: $base-background-color

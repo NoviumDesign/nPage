@@ -20,6 +20,14 @@
     input
       background-color: $form-background-color
 
+    .price-full, .price-reduced
+      +breakpoint($tablet-only)
+        min-height: 180px
+
+      +breakpoint($tablet)
+        .description
+          min-height: 85px
+
 .cat_button
   float: right
   margin-top: 6px
@@ -49,6 +57,10 @@
 
   +breakpoint($tablet)
     +span(6)
+
+  +breakpoint($mobile)
+    &:last-child
+      margin-top: 10px
 
 .hidden-input
   display: none

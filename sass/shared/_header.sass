@@ -10,6 +10,10 @@
       padding-top: 20px
       +container
 
+      +breakpoint($mobile)
+        padding-left: $container-padding-mobile
+        padding-right: $container-padding-mobile
+
       .logo-wrapper, .contact
 
         .call
@@ -19,7 +23,10 @@
             display: block
             max-height: 52px
 
-          a
+            +breakpoint($mobile)
+              margin-top: 4px
+
+          a.number
             display: none
             margin-left: 18px
             float: right
@@ -32,28 +39,25 @@
       .logo-wrapper
         +span(8)
 
-        +breakpoint($tablet)
-          +span(5)
+        +breakpoint($mobile)
+          text-align: center
 
-        +breakpoint($desktop)
+          img
+            max-width: 190px
+
+        +breakpoint($tablet)
           +span(6)
 
       .contact
         +span(2)
 
         +breakpoint($tablet)
-          +span(5)
-
-        +breakpoint($desktop)
           +span(6)
 
       .mobile-menu-button
         +span(2)
 
         +breakpoint($tablet)
-          +span(1)
-
-        +breakpoint($desktop)
           display: none
 
 #desktop-navigation
